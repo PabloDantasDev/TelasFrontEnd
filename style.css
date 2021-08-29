@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Muli:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap");
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
+
+
+:root{
+    --input-linear: linear-gradient(120deg, #E75590, #00C2CB);
+    --input-erro: red;
+    --botao--linear:linear-gradient(120deg, #E75590, #00C2CB,#E75590);
+    --button-disable:#acacac; 
+    --color-white:white;
+    --title:#303030;
+   
+}
+
+
+body{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TAG MAIN */
+.login{
+    height: 100vh;
+    background:var(--input-linear);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* DIV CONTAINER- CONTAINER DO FORMULARIO */
+.login_container{
+    min-height: 400px;
+    width: 300px;
+    background-color: var(--color-white);
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius: 8px;
+ 
+
+
+}
+
+.login_title{
+    width: 100%;
+    color: var(--title);
+    text-align: center;
+}
+.login__form{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.login_input{
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: unset;
+    outline: none;
+}
+.login_input-border{
+    height: 1px;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #cfcfcfcf;
+    transition: 3s ease-in-out;
+}
+
+.login_input-border::after{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    background:var(--input-linear);
+    transition: 1s ease-in-out;
+
+}
+
+.login_input:focus+.login_input-border::after{
+    width: 100%;
+}
+
+.login_input-border.erro{
+
+    background: var(--input-erro);
+}
+.login_input-border.erro::after{
+
+    background: var(--input-erro);
+}
+
+.login__submit:disabled{
+    background-color: var(--button-disable);
+    cursor: not-allowed;
+}
+
+.login__submit{
+    height: 48px;
+    width: 100%;
+    outline: none;
+    background: var(--botao--linear);
+    background-size: 200%;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: 0.8s ease-in-out;
+
+}
+.login__submit:hover{
+    background-position: right;
+}
+
+.login_reset{
+    font-size: 12px;
+    color: #929292;
+    text-decoration: none;
+    margin-top: 15px;
+   
+}
