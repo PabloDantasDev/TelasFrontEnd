@@ -1,0 +1,82 @@
+import .login.html
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.login{
+
+height: 100vh;
+background-color: aqua;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.login_containe{
+    min-height: 400px;
+    width: 280px;
+    background-color: rgb(255, 251, 254);
+    box-sizing: border-box;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: black;
+}
+
+.login-title{
+    text-align: center;
+    width: 100%;
+    color: rgb(39, 221, 212);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.login-input{
+    height: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: unset;
+    outline: none;
+    margin-top: 25px;
+    padding: auto;
+}
+.password-input{
+    height: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: unset;
+    outline: none;
+    margin-top: 8px;
+}
+
+.btn_login{
+    height: 35px;
+    width: 100%;
+    margin-top: 15px;
+    background-size: 200%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+
+}
+.btn_login:hover{
+   background: blue;
+   transition: 0.5s;
+}
+.reset{
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
